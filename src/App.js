@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Values from "values.js";
+import SingleColor from "./SingleColor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className="container">
+        <h3>Color Picker</h3>
+        <form>
+          <input type="text" className="" placeholder="#f15025" />
+          <button type="submit" className="btn">
+            Submit
+          </button>
+        </form>
+      </section>
+      <section className="colors">
+        <SingleColor />
+      </section>
+    </>
   );
 }
 
