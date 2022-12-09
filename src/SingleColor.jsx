@@ -4,7 +4,8 @@ import rgbToHex from "./utils";
 const SingleColor = ({ rgb, type, weight }) => {
   const [alert, setAlert] = useState(false);
 
-  const hex = rgbToHex(rgb[0], rgb[1], rgb[2]);
+  // const hex = rgbToHex(rgb[0], rgb[1], rgb[2]);
+  const hex = rgbToHex(...rgb);
 
   function handleClick() {
     navigator.clipboard.writeText(hex).then(() => {
